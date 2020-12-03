@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Baloo Chettan 2',cursive;
+    line-height: 1.4;
+}
+.title-text{
+    font-size: 40px;
+    text-align: center;
+}
+ /* Header Section */
+ .header{
+    min-height: 100vh;
+    background-image: url("images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: auto;
+ }
+ .hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height:80%;
+ }
+ .hero .title{
+     color: green;
+     font-size: 40px;
+     
+ }
+ .hero-button{
+     display: inline-block ;
+     text-decoration: none;
+     text-transform: uppercase;
+     padding: 13px 20px;
+     border-radius: 200px;
+     font-weight: bold;
+     background: green;
+     color: white;
+     cursor: pointer;
+     border: 2px solid green;
+    margin-top: 10px;
+ }
+ .hero-button:hover{
+     background: white;
+     color: green;
+     border: none;
+ }
+.pulsate{
+    animation: pulsate 3s ease-in-out;
+    animation-iteration-count: infinite;
+    opacity: .3;
+    color: black;
+}
+@-webkit-keyframes pulsate{
+    0%{
+        opacity: .3;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .3;
+    }
+}
+ /* End of Header Section */
+ /* About Us section */
+#about{
+    padding: 40px;
+}
+.about{
+    margin: 30px 0;
+    display: flex;
+}
+.about-icon .fas{
+    font-size: 700px;
+    color: green;
+    margin-right: 20px;   
+}
+.about-subtitle{
+    text-transform: capitalize;
+    color: green;
+    font-size: 24px;
+    padding-left: 30px;
+}
+.about-info{
+    margin-top: 10px;
+    line-height: 1.4;
+    padding-left: 30px;
+}
+.about .about-icon:hover .fas{
+    transition: transform 2s ease,color 2s ease;
+    transform :translateY(-10px);
+    color: green;
+    cursor: pointer;
+}
+.about-subtitle:hover{
+    transition: transform 2s ease,color 2s ease;
+    transform :translateY(-10px);
+    color: green;
+    cursor: pointer;
+}
+@media screen and (min-width:744px){
+    .about-center{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about{
+        flex: 0 0 calc(40% - 14% );
+        
+    }
+}
+ /* end of about section */
+ /* start menu section */
+ .menu-image{
+     min-height: 80vh;
+     background: url('images/bg2.jpg') center/cover fixed no-repeat;
+ }
+ .menu-text{
+     align-items: center;
+     min-height: 80vh;
+     background:green;
+     columns: black;
+     padding: 40px 0;
+ }
+ .menu-text-center{
+     width: 90%;
+     margin: 0 auto;
+ }
+.menu-text h1,h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color:black;
+}
+.menu-text p{
+    margin: 20px 0;
+    line-height: 2;
+    color:black;
+    
+}
+.menu-text a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: grey;
+    color: green;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+.menu-text a:hover{
+    background: black;
+     color: green;
+     border: none;
+}
+@media screen and (min-width:744px){
+    .menu{
+        display:flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+        
+    }
+    .menu-image{
+        flex: 0 0 70%;
+        clip-path: polygon(0 0, 100% 0 , 40% 100%,0 100%);
+        
+    }
+    .menu{
+        background:green;
+    }
+}
+ /* end menu section */
+ /* start social icons */
+#social-icons{
+    height: 170px;
+    background: white;
+    text-align: center;
+    padding: 40px 0 40px 0;
+}
+#social-icons a{
+    display: inline-block;
+    padding: 4px 9px;
+    margin: 0 4px;
+    font-size: 40px;
+    border-radius: 4px;
+    transition:transform 2s ease, color 2s ease;
+}
+#social-icons a:hover{
+    transform :translateY(-10px);
+}
+.facebook{
+    color: #4267B2;
+}
+.twitter{
+    color: #1DA1F2;
+}
+.instagram{
+    color: #e1307c;
+}
+.plus{
+    color: #db4a39;
+}
+ /* end social icons */
+
+ /* start number */
+ #number{
+     text-align: center;
+     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.4));
+     background: url('images/bg1.jpg') center/cover fixed no-repeat;
+     color: black;
+     padding: 70px 0;
+
+ }
+ .number p{
+     font-size: 30px;
+     font-weight: bold;
+ }
+ .number:hover{
+     color: green;
+ }
+ .number .fas{
+     font-size: 70px;
+     margin: 20px 0;
+     color: green;
+ }
+ .number h3{
+     text-transform: uppercase;
+     color: green;
+ }
+ @media screen and (min-width:778px){
+     #number{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+     }
+ }
+ @media screen and (min-width:992px){
+    #number{
+        
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+ /* end number section */
